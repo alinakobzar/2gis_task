@@ -191,7 +191,7 @@ class TestAuthUser:
             body = response.json()
             error = body["error"]
             assert "id" in error, "В 'error' нет поля 'id'"
-            assert error.get("message") == "Параметр 'message' должен содержать не более 999 символов", \
+            assert error.get("message") == "Параметр 'title' должен содержать не более 999 символов", \
                     f"Неверный message: {error.get('message')}"
 
     @allure.title("Проверка пустого значения поля title")
